@@ -19,12 +19,10 @@ body {
   margin: auto;
   margin-top: 55px;
 }
-
 .navbar li {
   margin-right: 55px;
   cursor: pointer;
 }
-
 .navbar li a {
   color: rgba(15, 15, 15, 0.19);
   font-family: "Qanelas";
@@ -35,23 +33,13 @@ body {
   text-align: center;
   letter-spacing: 0.992366px;
 }
-
 .navbar li.active {
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
 }
-
 .navbar li.active a {
   font-family: "Qanelas";
   font-style: normal;
@@ -62,7 +50,6 @@ body {
   letter-spacing: 0.992366px;
   color: #000;
 }
-
 .navbar li.active::after {
   position: absolute;
   top: 30px;
@@ -72,7 +59,6 @@ body {
   height: 4px;
   background-color: #000;
 }
-
 .navbar li:last-child {
   margin-right: 0px;
 }
@@ -81,20 +67,116 @@ body {
   margin-top: 10vh;
 }
 
+.totalPopup {
+  position: absolute;
+  bottom: 5vh;
+  margin: auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+.totalPopup .detailCar {
+  width: 100%;
+  max-width: 939px;
+  height: 95px;
+  background: #ffffff;
+  box-shadow: 0px 2px 70px rgba(0, 0, 0, 0.0703671);
+  border-radius: 11px;
+  flex-direction: row;
+  justify-content: space-between;
+  display: flex;
+}
+.totalPopup .detailCar .car {
+  padding-top: 22px;
+  padding-bottom: 23px;
+  padding-left: 27px;
+  padding-right: 27px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.totalPopup .detailCar .car img {
+  transform: scaleX(-1);
+  width: 110px;
+  height: 50px;
+}
+.totalPopup .detailCar .car .description {
+  position: relative;
+  margin-left: 58px;
+  display: flex;
+  flex-direction: column;
+}
+.totalPopup .detailCar .car .description::before {
+  content: "s";
+  left: -29px;
+  color: transparent;
+  position: absolute;
+  display: inline-block;
+  width: 1px;
+  height: 51px;
+  mix-blend-mode: normal;
+  opacity: 0.18;
+  border: 1px solid #979797;
+}
+.totalPopup .detailCar .car .description span:first-child {
+  font-family: "Qanelas";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 12px;
+  line-height: 15px;
+  letter-spacing: 1.7094px;
+  color: #1c1c1c;
+}
+.totalPopup .detailCar .car .description span:last-child {
+  font-family: "Qanelas";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 28px;
+  color: #1c1c1c;
+}
+.totalPopup .detailCar .button {
+  display: flex;
+  background: #181818;
+  border-radius: 0px 11px 11px 0px;
+  max-width: 253px;
+  width: 100%;
+  font-family: "Qanelas";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+  color: #fff;
+  letter-spacing: 2.78571px;
+  align-items: center;
+  text-align: center;
+  justify-content: space-around;
+}
+.totalPopup .detailCar .button::after {
+  display: block;
+  position: relative;
+  width: 24px;
+  height: 15px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  content: "s";
+  color: transparent;
+  background-image: url(../img/next.svg);
+}
+
 .circleCar {
   position: relative;
   cursor: pointer;
 }
-
 .circleCar .buttonArea {
   opacity: 0;
   position: absolute;
   bottom: 37px;
   display: none;
-  -webkit-transition: all 0.5s;
   transition: all 0.5s;
 }
-
 .circleCar button {
   background: #181818;
   border-radius: 100px;
@@ -114,10 +196,8 @@ body {
   margin: 0px;
   z-index: 9999;
   cursor: pointer !important;
-  -webkit-transition: all 0.5s;
   transition: all 0.5s;
 }
-
 .circleCar .checked {
   display: none;
   position: absolute;
@@ -126,15 +206,10 @@ body {
   width: 33px;
   height: 33px;
   background-color: #000;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   border-radius: 100%;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
 }
-
 .circleCar .carImage {
   position: absolute;
   bottom: 0px;
@@ -144,14 +219,11 @@ body {
   text-align: center;
   bottom: 143.12px;
   opacity: 0.4;
-  -webkit-transition: all 0.7s;
   transition: all 0.7s;
 }
-
 .circleCar .carImage img {
   margin: auto;
 }
-
 .circleCar .carDescription {
   width: 100%;
   position: absolute;
@@ -165,12 +237,11 @@ body {
   text-align: center;
   z-index: 9;
 }
-
 .circleCar .carName {
   width: 100%;
   position: absolute;
   text-align: center;
-  top: calc(50% - 174px / 2 - 33px);
+  top: calc(50% - 87px - 33px);
   font-family: "Qanelas";
   font-style: normal;
   font-weight: 800;
@@ -178,46 +249,34 @@ body {
   line-height: 174px;
   text-align: center;
   letter-spacing: -6.48px;
-  color: #00000018;
+  color: rgba(0, 0, 0, 0.0941176471);
   opacity: 0;
-  -webkit-transition: all 1s ease-in !important;
   transition: all 1s ease-in !important;
 }
-
 .circleCar:hover .buttonArea {
   opacity: 1 !important;
   display: block;
 }
-
 .circleCar:hover .carName {
-  -webkit-transition: all 2s !important;
   transition: all 2s !important;
-  top: calc(50% - 274px / 2 - 33px);
+  top: calc(50% - 137px - 33px);
   display: block !important;
   opacity: 1 !important;
 }
-
 .circleCar:hover .carImage {
   opacity: 1 !important;
 }
-
 .circleCar:hover button {
   background-color: #fff;
   color: #000;
-  -webkit-box-shadow: 0px 0px 20px #a7a7a7;
-          box-shadow: 0px 0px 20px #a7a7a7;
+  box-shadow: 0px 0px 20px rgb(167, 167, 167);
 }
-
 .circleCar.active .checked {
-  display: -webkit-box !important;
-  display: -ms-flexbox !important;
   display: flex !important;
 }
-
 .circleCar.active .carName {
   opacity: 1;
 }
-
 .circleCar.active::after {
   content: "ds";
   margin: auto;
@@ -230,20 +289,16 @@ body {
   border: 1px solid #000000;
   border-radius: 253.5px;
 }
-
 .circleCar.active .carDescription {
   display: block;
 }
-
 .circleCar.active .buttonArea {
   opacity: 1;
   display: block;
 }
-
 .circleCar.active .carImage {
   opacity: 1 !important;
 }
-
 .circleCar::after {
   content: "ds";
   margin: auto;
@@ -256,5 +311,4 @@ body {
   border: 1px solid #000000;
   border-radius: 253.5px;
   z-index: -1;
-}
-/*# sourceMappingURL=index.css.map */
+}/*# sourceMappingURL=index.css.map */

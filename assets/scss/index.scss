@@ -70,6 +70,109 @@ $menu: rgba(#0f0f0f, 0.19);
     margin-top: 10vh;
 }
 
+.totalPopup {
+    position: absolute;
+    bottom: 5vh;
+    margin: auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+
+    .detailCar {
+        width: 100%;
+        max-width: 939px;
+        height: 95px;
+        background: #ffffff;
+        box-shadow: 0px 2px 70px rgba(0, 0, 0, 0.0703671);
+        border-radius: 11px;
+        flex-direction: row;
+        justify-content: space-between;
+        display: flex;
+        .car {
+            padding-top: 22px;
+            padding-bottom: 23px;
+            padding-left: 27px;
+            padding-right: 27px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            img {
+                transform: scaleX(-1);
+                width: 110px;
+                height: 50px;
+            }
+            .description {
+                position: relative;
+                margin-left: 58px;
+                display: flex;
+                flex-direction: column;
+                &::before {
+                    content: "s";
+                    left: -29px;
+                    color: transparent;
+                    position: absolute;
+                    display: inline-block;
+                    width: 1px;
+                    height: 51px;
+                    mix-blend-mode: normal;
+                    opacity: 0.18;
+                    border: 1px solid #979797;
+                }
+                span {
+                    &:first-child {
+                        font-family: "Qanelas";
+                        font-style: normal;
+                        font-weight: 800;
+                        font-size: 12px;
+                        line-height: 15px;
+                        letter-spacing: 1.7094px;
+                        color: #1c1c1c;
+                    }
+                    &:last-child {
+                        font-family: "Qanelas";
+                        font-style: normal;
+                        font-weight: 300;
+                        font-size: 24px;
+                        line-height: 28px;
+                        color: #1c1c1c;
+                    }
+                }
+            }
+        }
+        .button {
+            display: flex;
+
+            background: #181818;
+            border-radius: 0px 11px 11px 0px;
+            max-width: 253px;
+            width: 100%;
+            font-family: "Qanelas";
+            font-style: normal;
+            font-weight: 700;
+            font-size: 12px;
+            line-height: 15px;
+            color: #fff;
+            letter-spacing: 2.78571px;
+            align-items: center;
+            text-align: center;
+            justify-content: space-around;
+            &::after {
+                display: block;
+                position: relative;
+                width: 24px;
+                height: 15px;
+                background-size: contain;
+                background-repeat: no-repeat;
+                content: "s";
+                color: transparent;
+                background-image: url(../img/next.svg);
+            }
+        }
+    }
+}
+
 .circleCar {
     position: relative;
     cursor: pointer;
