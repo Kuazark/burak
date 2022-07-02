@@ -364,6 +364,22 @@ $menu: rgba(#0f0f0f, 0.19);
                 transform: scale(1.4);
             }
         }
+
+        &.clear {
+            margin-top: 100px;
+            position: relative;
+            &::after {
+                display: none !important;
+            }
+            .carName {
+                position: relative;
+                transform: scale(2.6);
+            }
+            .carImage {
+                bottom: -30px;
+                transform: scale(1.3);
+            }
+        }
     }
     &::after {
         content: "ds";
@@ -378,4 +394,15 @@ $menu: rgba(#0f0f0f, 0.19);
         border-radius: 253.5px;
         z-index: -1;
     }
+}
+
+.colorPageTopText {
+    font-family: "Qanelas";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 18px;
+    text-align: center;
+
+    color: #1c1c1c;
 }
