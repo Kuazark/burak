@@ -143,7 +143,6 @@ $menu: rgba(#0f0f0f, 0.19);
         }
         .button {
             display: flex;
-
             background: #181818;
             border-radius: 0px 11px 11px 0px;
             max-width: 253px;
@@ -158,6 +157,13 @@ $menu: rgba(#0f0f0f, 0.19);
             align-items: center;
             text-align: center;
             justify-content: space-around;
+
+            &.buy {
+                &::after {
+                    background-image: url(../img/buy.svg);
+                }
+            }
+
             &::after {
                 display: block;
                 position: relative;
@@ -170,6 +176,36 @@ $menu: rgba(#0f0f0f, 0.19);
                 background-image: url(../img/next.svg);
             }
         }
+    }
+}
+
+.car-summary {
+    padding-top: 32px;
+    padding-bottom: 32px;
+    border-bottom: 1px solid rgba($color: #979797, $alpha: 0.09);
+    &:last-child {
+        border-bottom: none !important;
+    }
+    .feature {
+        font-family: "Qanelas";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 15px;
+        letter-spacing: 0.992366px;
+        text-transform: uppercase;
+        color: #0f0f0f;
+        margin-bottom: 19px;
+    }
+    .featureDescription {
+        font-family: "Qanelas";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 19px;
+        color: #1c1c1c;
+        mix-blend-mode: normal;
+        opacity: 0.38;
     }
 }
 
@@ -316,6 +352,17 @@ $menu: rgba(#0f0f0f, 0.19);
         }
         .carImage {
             opacity: 1 !important;
+        }
+
+        &.big {
+            .carImage {
+                img {
+                    transform: scale(1.3);
+                }
+            }
+            .carName {
+                transform: scale(1.4);
+            }
         }
     }
     &::after {
