@@ -200,6 +200,60 @@ $menu: rgba(#0f0f0f, 0.19);
     }
 }
 
+.card {
+    height: 283px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: 1px solid #97979724;
+    border-radius: 11px;
+    .checked {
+        background-color: transparent;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 33px;
+        height: 33px;
+        border-radius: 100%;
+        border: 1px solid #97979732;
+    }
+    .card-title {
+        margin-top: 50px;
+        font-family: "Qanelas";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 17px;
+        text-align: center;
+        letter-spacing: 0.992366px;
+        text-transform: uppercase;
+
+        color: #0f0f0f;
+    }
+
+    .card-price {
+        font-family: "Qanelas";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 19px;
+        text-align: center;
+
+        color: #1c1c1c;
+    }
+
+    &.active {
+        background-color: #292929;
+        .checked {
+            background-color: #353535 !important;
+        }
+        .card-title,
+        .card-price {
+            color: #fff !important;
+        }
+    }
+}
+
 .car-summary {
     padding-top: 32px;
     padding-bottom: 32px;
