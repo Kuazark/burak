@@ -367,6 +367,71 @@ body {
   z-index: -1;
 }
 
+.colors {
+  height: 200px;
+  display: flex;
+  margin-top: 60px;
+  justify-content: center;
+  align-items: center;
+}
+.colors li {
+  display: inline-block;
+  position: relative;
+  list-style: none;
+  margin-right: 14px;
+  cursor: pointer;
+}
+.colors li.active {
+  position: relative;
+  padding: 5px;
+}
+.colors li.active::after {
+  display: block;
+  content: "s";
+  color: transparent;
+  position: absolute;
+  top: -5px;
+  border-radius: 100%;
+  left: -5px;
+  width: 43px;
+  height: 43px;
+  border: 1px solid rgba(0, 0, 0, 0.3607843137);
+}
+.colors li.active .checked {
+  position: absolute;
+  top: -13px;
+  left: -13px;
+  width: 30px;
+  height: 30px;
+  background-color: #000;
+  display: flex;
+  border-radius: 100%;
+  justify-content: center;
+  align-items: center;
+  border: 4px solid #fff;
+}
+.colors li.active .checked img {
+  width: 7.81px;
+}
+.colors li.red {
+  width: 33px;
+  height: 33px;
+  border-radius: 100%;
+  background: #b40f14;
+}
+.colors li.black {
+  width: 33px;
+  height: 33px;
+  border-radius: 100%;
+  background: #1c1c1c;
+}
+.colors li.grey {
+  width: 33px;
+  height: 33px;
+  border-radius: 100%;
+  background: #c8c8c8;
+}
+
 .colorPageTopText {
   font-family: "Qanelas";
   font-style: normal;
