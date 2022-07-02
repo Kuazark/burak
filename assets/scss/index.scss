@@ -5,6 +5,17 @@ body {
 $grey: #d8d8d8;
 $menu: rgba(#0f0f0f, 0.19);
 
+$base-color: #000000;
+
+$color-1: rgba($base-color, 0.1);
+$color-2: rgba($base-color, 0.2);
+$color-3: rgba($base-color, 0.3);
+$color-4: rgba($base-color, 0.4);
+$color-5: rgba($base-color, 0.5);
+$color-6: rgba($base-color, 0.6);
+$color-7: rgba($base-color, 0.7);
+$color-8: rgba($base-color, 0.8);
+
 .circle {
     position: relative;
     top: -55px;
@@ -252,6 +263,26 @@ $menu: rgba(#0f0f0f, 0.19);
             color: #fff !important;
         }
     }
+}
+
+* {
+    scrollbar-width: thin;
+    scrollbar-color: $color-3 $color-1;
+}
+
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+    width: 7px;
+}
+
+*::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: $color-3;
+    border-radius: 20px;
+    border: 3px solid $color-1;
 }
 
 .car-summary {
